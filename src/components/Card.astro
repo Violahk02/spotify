@@ -10,13 +10,30 @@ const {header, beskrivelse, billede} = Astro.props;
             <h2>{header}</h2>
             <p>{beskrivelse}</p>
         </div>
-    </div>  
+    </div>
     </a>  
 </article>
 
 <style>
-    
-    article{
+    img{
+        border-radius: 10px;
+        width: 100%;
+    }
+    .carddesign{
+    width: 200px;
+    padding: 10px;
+        }
+        .carddesign:hover{
+        background-color: rgba(255, 255, 255, 0.122); 
+        border-radius: 20px;
+    }
+    .beskrivelse{
+        color:rgb(118, 118, 118);
+    }
+    a{
+        text-decoration: none;
+    }
+    /* article{
         margin: 10px;
         border-radius: 30px;
         a{
@@ -36,5 +53,5 @@ const {header, beskrivelse, billede} = Astro.props;
     }
     .carddesign{
         margin: 10px;
-    }
+    } */
 </style>

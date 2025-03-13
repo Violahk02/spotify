@@ -2,7 +2,20 @@ body {
   background-color: rgb(24, 23, 23);
 }
 
+/* main {
+  margin: 50px;
+} */
+
 .mix_container {
   display: flex;
   flex-direction: row;
+  gap: 30px;
+}
+
+.minicard_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
 }
