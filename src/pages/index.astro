@@ -1,11 +1,34 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Card from "../components/Card.astro";
+import Cards from "../components/Cards.astro";
+import Filterbutton from "../components/Filterbutton.astro";
+import "../styles/styles.css";
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+</head>
+<body>
+	
+<main>
+<Filterbutton titel="Alle" />
+<Filterbutton titel="Musik" />
+<Filterbutton titel="Podcast" />
 
-<Layout>
-	<Welcome />
-</Layout>
+<h2>Specielt til Viola Holm Knudsen</h2>
+<div class="mix_container">
+<Card header="Daily Mix 1" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill"/>
+<Card header="Daily Mix 2" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill"/>
+<Card header="Daily Mix 3" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill"/>
+<Card header="Daily Mix 4" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill"/>
+</div>
+
+</slot>
+</main>
+
+</body>
+</html>
+
