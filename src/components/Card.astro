@@ -1,13 +1,16 @@
 ---
-const {header, beskrivelse, billede} = Astro.props;
+const {header, beskrivelse, billede, nr, color} = Astro.props;
 ---
 
-<article>
+<article >
     <a href="#">
     <div class="carddesign">
         <img src={billede} alt="billede">
+        <div class="mix" >
+            <h3 style=`background-color:${color}`>{header}</h3>
+            <h2 style=`background-color:${color}`>{nr}</h2>
+        </div>
         <div class="beskrivelse">
-            <h2>{header}</h2>
             <p>{beskrivelse}</p>
         </div>
     </div>
@@ -15,6 +18,22 @@ const {header, beskrivelse, billede} = Astro.props;
 </article>
 
 <style>
+.mix{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 60%;
+    gap: 70px;
+    
+    h3{
+        color:black;
+        margin-left: 8px;
+        padding: 5px;
+    }
+    h2{
+        color:black;
+    }
+}
     img{
         border-radius: 10px;
         width: 100%;
@@ -33,25 +52,5 @@ const {header, beskrivelse, billede} = Astro.props;
     a{
         text-decoration: none;
     }
-    /* article{
-        margin: 10px;
-        border-radius: 30px;
-        a{
-            text-decoration: none;
-            color: rgb(161, 158, 158);
-        }
-         img{
-            border-radius: 30px;
-            
-        }
-        .beskrivelse{
-            margin: 10px;
-        }
-    }
-    article:hover{
-        background-color: rgba(255, 255, 255, 0.122); 
-    }
-    .carddesign{
-        margin: 10px;
-    } */
+    
 </style>
