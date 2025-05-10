@@ -2,6 +2,7 @@
 import Card from "../components/Card.astro";
 import Cards from "../components/Cards.astro";
 import Filterbutton from "../components/Filterbutton.astro";
+import Minicard from "../components/Minicard.astro";
 import "../styles/styles.css";
 ---
 <!DOCTYPE html>
@@ -18,12 +19,24 @@ import "../styles/styles.css";
 <Filterbutton titel="Musik" />
 <Filterbutton titel="Podcast" />
 
+<div class="minicard_container">
+<Minicard billede="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" titel="Chill-mix"/>
+<Minicard billede="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" titel="HipHop-mix"/>
+<Minicard billede="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" titel="Radio med APACHA"/>
+<Minicard billede="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill" titel="Doechii"/>
+<Minicard billede="https://picsum.photos/id/65/150/150" titel="Doechii"/>
+<Minicard billede="https://picsum.photos/id/68/150/150" titel="//"/>
+<Minicard billede="https://picsum.photos/id/76/150/150" titel="Hype Running mix"/>
+<Minicard billede="https://picsum.photos/id/240/150/150" titel="Et sted hvor vi de første"/>
+</div>
+
 <h2>Specielt til Viola Holm Knudsen</h2>
 <div class="mix_container">
-<Card header="Daily Mix 1" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill"/>
-<Card header="Daily Mix 2" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill"/>
-<Card header="Daily Mix 3" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill"/>
-<Card header="Daily Mix 4" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill"/>
+<Card header="Daily Mix" nr="01" color="blue" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill"/>
+<Card header="Daily Mix" nr="02" color="red" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill"/>
+<Card header="Daily Mix" nr="03" color="orange" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill"/>
+<Card header="Daily Mix" nr="04" color="green" beskrivelse="Gilli, KESI, Jay Z og mere" billede="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill"/>
+<Card header="Daily Mix" nr="05" color="yellow" beskrivelse="Miley Cyrus, Rihanna, Justin Bieber og mere" billede="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill"/>
 </div>
 
 </slot>

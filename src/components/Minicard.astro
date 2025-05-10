@@ -1,0 +1,33 @@
+---
+const {billede, titel} = Astro.props;
+---
+
+<article>
+    <a href="#">
+        <div class="minicarddesign">
+            <img src={billede} alt="billede">
+            <h3>{titel}</h3>
+        </div>
+    </a>
+
+    <style>
+        img{
+            border-radius: 10px;
+            width: 20%;
+        }
+        .minicarddesign{
+        display: flex;
+           align-items: center;
+           background-color: rgba(255, 255, 255, 0.122); 
+           border-radius: 5px;
+           width: 300px;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        h3{
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
